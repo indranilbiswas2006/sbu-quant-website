@@ -28,7 +28,7 @@ export default function HomePage() {
               href="/contact"
               className="rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white hover:border-neon hover:text-neon"
             >
-              Become a sponser
+              Join us
             </Link>
           </div>
         </div>
