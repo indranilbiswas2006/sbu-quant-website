@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-midnight text-ice antialiased;
+  font-feature-settings: "liga" 1, "kern" 1;
+  font-family: var(--font-space), ui-sans-serif, system-ui;
+}
+
+.background-grid {
+  background-size: 40px 40px;
+}
+
+.glass {
+  background: rgba(10, 16, 26, 0.7);
+  border: 1px solid rgba(124, 156, 255, 0.2);
+  box-shadow: 0 20px 60px rgba(5, 8, 15, 0.45);
+  backdrop-filter: blur(18px);
+}
+
+.noise::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.2'/%3E%3C/svg%3E");
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
