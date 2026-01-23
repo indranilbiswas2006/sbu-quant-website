@@ -132,11 +132,11 @@ function meanSquaredError(points: Point[], coeffs: Coefficients) {
   return total / points.length;
 }
 
-function renderScatterPoint(props: { cx?: number; cy?: number; fill?: string }) {
-  const { cx, cy, fill } = props;
-  if (cx === undefined || cy === undefined) return null;
-  return <circle cx={cx} cy={cy} r={POINT_RADIUS} fill={fill ?? "rgba(200, 16, 46, 0.95)"} />;
-}
+const renderScatterPoint = (props: any) => {
+  const { cx, cy } = props;
+  if (cx == null || cy == null) return null;
+  return <circle cx={cx} cy={cy} r={4} fill="rgba(200,16,46,0.95)" />;
+};
 
 export default function CurveFittingDemo() {
   const [isMounted, setIsMounted] = useState(false);
@@ -304,7 +304,7 @@ export default function CurveFittingDemo() {
                   data={points}
                   dataKey="y"
                   fill="rgba(200, 16, 46, 0.95)"
-                  shape={renderScatterPoint}
+                  shape={renderScatterPoint as any}
                   line={false}
                 />
               </ComposedChart>
