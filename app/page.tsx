@@ -105,19 +105,42 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto w-full max-w-6xl px-6 pb-24">
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="text-xs uppercase tracking-[0.3em] text-white/50">Event Photos</p>
+            <h2 className="mt-3 text-3xl font-semibold text-white">Snapshots from recent sessions.</h2>
+          </div>
+          <p className="max-w-md text-sm text-white/60">
+            Highlights from recent sessions and speaker nights..
+          </p>
+        </div>
+        <div className="mt-8 grid gap-6 md:grid-cols-2">
           {[
-            { label: "Members", value: "25+" },
-            { label: "Workshops", value: "6" },
-            { label: "Speaker Events", value: "3+" }
-          ].map((stat, index) => (
-            <AnimatedInView
-              key={stat.label}
-              delay={index * 0.1}
-              className="rounded-2xl border border-white/10 bg-carbon/60 p-6"
-            >
-              <p className="text-xs uppercase tracking-[0.3em] text-white/40">{stat.label}</p>
-              <p className="mt-3 text-3xl font-semibold text-white">{stat.value}</p>
+            {
+              title: "Convex Analysis Workshop",
+              description: "Core optimization concepts and how they appear in quant modeling.",
+              image: "/Convex_Analysis.JPG"
+            },
+            {
+              title: "Flow Traders Workshop",
+              description: "Market making, pricing mechanics, and a free Chick-fil-A spread.",
+              image: "/Flow_Traders.jpg"
+            }
+          ].map((photo, index) => (
+            <AnimatedInView key={photo.title} delay={index * 0.1}>
+              <div className="group overflow-hidden rounded-2xl border border-white/10 bg-carbon/60">
+                <div className="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-slate-700/60 via-slate-800/40 to-slate-900/80">
+                  <img
+                    src={photo.image}
+                    alt={photo.title}
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.02]"
+                  />
+                </div>
+                <div className="p-5">
+                  <p className="text-sm font-semibold text-white">{photo.title}</p>
+                  <p className="mt-2 text-sm text-white/70">{photo.description}</p>
+                </div>
+              </div>
             </AnimatedInView>
           ))}
         </div>
