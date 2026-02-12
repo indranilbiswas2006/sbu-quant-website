@@ -1,8 +1,5 @@
 import Link from "next/link";
 import { AnimatedInView } from "../components/AnimatedInView";
-import { HeroFade } from "../components/HeroFade";
-import CurveFittingDemo from "../components/CurveFittingDemo";
-
 export default function HomePage() {
   return (
     <div>
@@ -14,8 +11,7 @@ export default function HomePage() {
           </h1>
           <p className="mt-6 max-w-xl text-lg text-white/70">
             Stony Brook Quant Club connects students who love data, markets, and code. We run
-            hands-on workshops, research sprints, and speaker nights to explore systematic
-            strategies and modern finance.
+            hands-on workshops, research sprints, and speaker nights to explore fun problems.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
@@ -31,33 +27,6 @@ export default function HomePage() {
               Join us
             </Link>
           </div>
-        </div>
-        <HeroFade className="flex-1">
-          <CurveFittingDemo />
-        </HeroFade>
-      </section>
-
-      <section className="mx-auto w-full max-w-6xl px-6 pb-20">
-        <div className="grid gap-6 md:grid-cols-3">
-          {[
-            {
-              title: "Workshops",
-              description: "Hands-on sessions covering probability, statistics, options basics, and quant-style problem solving."
-            },
-            {
-              title: "Interview Prep",
-              description: "Weekly practice for mental math, brainteasers, coding, and quant recruiting fundamentals."
-            },
-            {
-              title: "Python + Data",
-              description: "Guest speakers, alumni chats, and a student network to learn what quant roles are actually like."
-            }
-          ].map((item, index) => (
-            <AnimatedInView key={item.title} delay={index * 0.1} className="glass rounded-2xl p-6">
-              <h3 className="text-xl font-semibold text-white">{item.title}</h3>
-              <p className="mt-3 text-sm text-white/70">{item.description}</p>
-            </AnimatedInView>
-          ))}
         </div>
       </section>
 
@@ -89,16 +58,6 @@ export default function HomePage() {
                   {item}
                 </div>
               ))}
-              <div className="pt-2">
-                <a
-                  href="https://discord.gg/TGxCGcaEwu"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex rounded-full border border-white/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white/70 transition hover:border-neon hover:text-neon"
-                >
-                  Join Discord
-                </a>
-              </div>
             </div>
           </div>
         </AnimatedInView>

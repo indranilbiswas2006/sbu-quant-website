@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export function Footer() {
   return (
     <footer className="border-t border-white/10 bg-carbon/70">
@@ -7,17 +5,6 @@ export function Footer() {
         <div>
           <p className="text-white">Stony Brook Quant Club</p>
           <p className="mt-2 max-w-sm">Building a community around quantitative finance, data science, and markets.</p>
-        </div>
-        <div className="flex flex-wrap gap-6 text-xs uppercase tracking-[0.3em]">
-          <Link href="/team" className="transition hover:text-white">
-            Team
-          </Link>
-          <Link href="/events" className="transition hover:text-white">
-            Events
-          </Link>
-          <Link href="/contact" className="transition hover:text-white">
-            Contact
-          </Link>
         </div>
       </div>
     </footer>

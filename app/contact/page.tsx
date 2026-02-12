@@ -6,10 +6,9 @@ export default function ContactPage() {
     <div className="mx-auto w-full max-w-6xl px-6 pb-24 pt-16 md:pt-24">
       <AnimatedInView>
         <p className="text-xs uppercase tracking-[0.4em] text-neon">Contact</p>
-        <h1 className="mt-6 text-4xl font-semibold text-white sm:text-5xl">Let&apos;s build together.</h1>
+        <h1 className="mt-6 text-4xl font-semibold text-white sm:text-5xl">Get in touch with us.</h1>
         <p className="mt-6 max-w-2xl text-lg text-white/70">
-          Reach out for membership, partnerships, or to speak at a workshop. We reply within 48
-          hours.
+          Reach out for membership, partnerships, or to speak at a workshop.
         </p>
       </AnimatedInView>
 
@@ -83,7 +82,7 @@ export default function ContactPage() {
           </div>
           <div className="rounded-2xl border border-white/10 bg-carbon/60 p-6">
             <p className="text-xs uppercase tracking-[0.3em] text-white/50">Meetings</p>
-            <p className="mt-3 text-lg text-white">Thursdays • 7:00 PM</p>
+            <p className="mt-3 text-lg text-white">Thursdays • 6:00 - 7:00 PM</p>
           </div>
           <div className="rounded-2xl border border-white/10 bg-carbon/60 p-6">
             <p className="text-xs uppercase tracking-[0.3em] text-white/50">For sponsors / speakers</p>
