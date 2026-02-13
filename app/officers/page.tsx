@@ -12,19 +12,19 @@ const officers = [
     name: "David",
     role: "Vice President",
     imageSrc: "/team/placeholder.svg",
-    linkedinUrl: "https://www.linkedin.com"
+    linkedinUrl: "https://www.linkedin.com/in/davidrlai/"
   },
   {
     name: "Indranil",
     role: "Treasurer",
     imageSrc: "/team/placeholder.svg",
-    linkedinUrl: "https://www.linkedin.com"
+    linkedinUrl: "https://www.linkedin.com/in/indranilbiswas06/"
   },
   {
     name: "Chris",
     role: "Secretary",
     imageSrc: "/team/placeholder.svg",
-    linkedinUrl: "https://www.linkedin.com"
+    linkedinUrl: "https://www.linkedin.com/in/chris-jia-7a45802b3/"
   },
   {
     name: "Mathew",
@@ -36,7 +36,7 @@ const officers = [
     name: "Rahul",
     role: "Chairman of the Board",
     imageSrc: "/team/placeholder.svg",
-    linkedinUrl: "https://www.linkedin.com"
+    linkedinUrl: "https://www.linkedin.com/in/rahul-muthu-073366218/"
   }
 ];
 
