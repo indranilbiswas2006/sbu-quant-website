@@ -5,36 +5,54 @@ const officers = [
   {
     name: "James",
     role: "President",
+    intro: "Building a curious, collaborative community around quantitative finance.",
+    major: "Add major",
+    graduationDate: "Add graduation date",
     imageSrc: "/team/placeholder.svg",
     linkedinUrl: "https://www.linkedin.com"
   },
   {
     name: "David",
     role: "Vice President",
+    intro: "Helping turn ambitious ideas into welcoming events and practical projects.",
+    major: "Add major",
+    graduationDate: "Add graduation date",
     imageSrc: "/team/placeholder.svg",
     linkedinUrl: "https://www.linkedin.com/in/davidrlai/"
   },
   {
     name: "Indranil",
     role: "Treasurer",
+    intro: "Keeping the club moving while exploring the ideas behind markets and data.",
+    major: "Add major",
+    graduationDate: "Add graduation date",
     imageSrc: "/team/placeholder.svg",
     linkedinUrl: "https://www.linkedin.com/in/indranilbiswas06/"
   },
   {
     name: "Chris",
     role: "Secretary",
+    intro: "Connecting members, speakers, and workshops through thoughtful organization.",
+    major: "Add major",
+    graduationDate: "Add graduation date",
     imageSrc: "/team/placeholder.svg",
     linkedinUrl: "https://www.linkedin.com/in/chris-jia-7a45802b3/"
   },
   {
     name: "Mathew",
     role: "Director of Workshops",
+    intro: "Designing hands-on sessions that make quantitative concepts easier to explore.",
+    major: "Add major",
+    graduationDate: "Add graduation date",
     imageSrc: "/team/placeholder.svg",
     linkedinUrl: "https://www.linkedin.com"
   },
   {
     name: "Rahul",
     role: "Chairman of the Board",
+    intro: "Offering perspective and support as the next generation builds together.",
+    major: "Add major",
+    graduationDate: "Add graduation date",
     imageSrc: "/team/placeholder.svg",
     linkedinUrl: "https://www.linkedin.com/in/rahul-muthu-073366218/"
   }
@@ -59,11 +77,11 @@ export default function OfficersPage() {
             delay={index * 0.08}
             className="glass group rounded-2xl p-6 transition-transform hover:-translate-y-1"
           >
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-5">
               <img
                 src={member.imageSrc}
                 alt={`${member.name} headshot`}
-                className="h-16 w-16 rounded-2xl border border-white/10 object-cover"
+                className="h-24 w-24 rounded-2xl border border-white/10 object-cover"
               />
               <div>
                 <h3 className="text-xl font-semibold text-white">{member.name}</h3>
@@ -72,6 +90,19 @@ export default function OfficersPage() {
                 </p>
               </div>
             </div>
+            <p className="mt-5 text-sm leading-6 text-white/70">{member.intro}</p>
+            <dl className="mt-5 grid grid-cols-2 gap-3 border-y border-white/10 py-4">
+              <div>
+                <dt className="text-[10px] uppercase tracking-[0.25em] text-neon/80">Major</dt>
+                <dd className="mt-1 text-sm text-white/80">{member.major}</dd>
+              </div>
+              <div>
+                <dt className="text-[10px] uppercase tracking-[0.25em] text-neon/80">
+                  Graduation
+                </dt>
+                <dd className="mt-1 text-sm text-white/80">{member.graduationDate}</dd>
+              </div>
+            </dl>
             <div className="mt-4 flex items-center gap-3">
               <a
                 href={member.linkedinUrl}
