@@ -7,8 +7,8 @@ const officers = [
     role: "President",
     major: "Computer Science",
     year: "2027",
-    imageSrc: "/team/placeholder.svg",
-    quote: "tbd",
+    imageSrc: "/team/james-cao.png",
+    quote: "Excited to meet you all!",
     linkedinUrl: "https://www.linkedin.com"
   },
   {
@@ -84,13 +84,13 @@ export default function OfficersPage() {
           <AnimatedInView
             key={member.name}
             delay={index * 0.08}
-            className="glass group rounded-2xl p-6 transition-transform hover:-translate-y-1"
+            className="glass group rounded-2xl p-7 transition-transform hover:-translate-y-1"
           >
-            <div className="flex items-center gap-5">
+            <div className="flex items-center gap-6">
               <img
                 src={member.imageSrc}
                 alt={`${member.name} headshot`}
-                className="h-24 w-24 rounded-2xl border border-white/10 object-cover"
+                className="h-40 w-36 shrink-0 rounded-2xl border border-white/10 object-cover"
               />
               <div>
                 <h3 className="text-xl font-semibold text-white">{member.name}</h3>
